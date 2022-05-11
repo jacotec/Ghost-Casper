@@ -52,7 +52,7 @@ which templates loop over to generate a list of posts. --}}
             </ul>
             <div class="post-card-byline-content">
                 <span class="post-card-byline-author">{{#has author="count:>2"}}Multiple authors{{else}}{{authors}}{{/has}}</span>
-                <span class="post-card-byline-date"><time datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time> <span class="bull">&bull;</span> {{reading_time}}</span>
+                <span class="post-card-byline-date"><time datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time> <span class="bull">&bull;</span> {{reading_time seconds=(t "< 1 Min. Lesezeit") minute=(t "1 Min. Lesezeit") minutes=(t "% Min. Lesezeit")}}</span>
             </div>
         </footer>
 
